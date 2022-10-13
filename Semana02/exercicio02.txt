@@ -1,0 +1,33 @@
+Quando o GCC é invocado, ele executa 4 etapas para gerar o executável: Pré-processamento, compilação, montagem/assembly e vinculação/ligação.
+
+Pré-processamento:
+	Na etapa de pré-processamento, o compilador expande as macros e lida com as diretivas do código precedidas pelo #, 
+como os #include e os #define, e também suprime os comentários.
+
+Compilação:
+	Nessa etapa, o compilador vai usar a opção -S para traduzir o código fonte na linguagem C/C++ gerado na etapa anterior para a linguagem Assembly. 
+O compilador gera uma arquivo de extensão .s
+
+Montagem:
+	Esta etapa irá transformar o código de máquina(Assembly) em código de objeto, pronto para ser interpretado pelo processador.
+
+Vinculação/ligação:
+	Nessa etapa, serão lincados os arquivos binários (objeto) da etapa anterior para gerar o executável autônomo que será distribuído para os usuários.
+
+
+
+Parâmetros extras do gcc:
+
+-static: este comando copia as funções externas das biblitecas do código para o executável, ao invés de utilizar as bibliotecas de forma compartilhada.
+
+-g: inclui informações padrões de debugging no binário do executável.
+
+-pedantic: emite os avisos requeridos pelo padrão ANSI/ISO.
+
+-Wall: emite todos os avisos comumente úteis que o gcc pode prover. Avisos epecíficos podem ser emitidos usando -W{Aviso}.
+
+-Os: comando utilizado para otimizar o executável para tamanho. Inclui todas as otimização do comando -O2 que não aumentam o tamanho do arquivo e mais
+algumas que diminuem o tamanho do executável.
+
+-O3: comando utilizado para otimizar o executável para performance. Inclui todas as otimizações do comando -O2 e mais algumas. 
+
