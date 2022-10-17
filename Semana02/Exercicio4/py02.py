@@ -22,5 +22,3 @@ print(message)
 
 message = '{}, {}. Welcome!'.format(greeting,name)
 print(message)
-
-print(help(str))
