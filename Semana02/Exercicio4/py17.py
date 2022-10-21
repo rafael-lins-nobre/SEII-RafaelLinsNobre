@@ -1,9 +1,7 @@
 import datetime
 import pytz
 
-# Naive dates and times are easier to work, but doesn't provide much information
-
-# Code 01
+# ============ Codigo 1 =================
 d = datetime.date(2021, 12, 27) #year/month/day
 print(d)
 tday = datetime.date.today()    #current local date
@@ -11,6 +9,7 @@ print(tday) #full date
 print(tday.weekday()) #day of the week -> 0 to 6
 print(tday.isoweekday) #day of the week -> 1 to 7
 
+# ============ Codigo 2 - Time Deltas =================
 # Code 02 - Time Deltas
 tday = datetime.date.today()
 tdelta = datetime.timedelta(days=7)
@@ -18,13 +17,15 @@ print(tday + tdelta)
 #date2 = date1 + timedelta
 #timedelta = date1 + date2
 
-# Code 03
+# ============ Codigo 3 =================
 tday = datetime.date.today()
 bday = datetime.date(2022, 3, 9)
 till_bday = bday - tday
 print(till_bday.total_seconds())
 
-# Code 04 - Working with 'date' and'time'
+
+# ============ Codigo 4 - "Date" e "Time" =================
+
 #dt = datetime.datetime(2016, 7, 26, 12, 30, 45, 100000)
 #tdelta = datetime.timedelta(days=7)
 #print(dt + tdelta)
@@ -35,7 +36,7 @@ tdelta = datetime.timedelta(hour=12)
 print(t.hour)
 print(dt+tdelta)
 
-# Code 05
+# ============ Codigo 5 =================
 dt = datetime.datetime(2016, 7, 26, 12, 30, 45, 100000)
 tdelta = datetime.timedelta(days=7)
 print(dt + tdelta)
