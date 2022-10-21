@@ -1,9 +1,9 @@
 # ======= Codigo 1 ==========
 try:
     f = open('test_file.txt')
-    #var = bad_var #causes an error
+    #var = bad_var # Causa um erro
 except FileNotFoundError:
-    print('Sorry. This file does not exist')
+    print('Desculpa. Esse arquivo nao existe!')
 except Exception as e:
     print(e)
 
@@ -20,6 +20,6 @@ else:
     print(f.read())
     f.close()
 finally:
-    print("Executing Finally...")
+    print("Executando...")
 
-print('End of program')
+print('Fim do programa')
