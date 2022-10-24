@@ -1,3 +1,5 @@
+# Heranças e hierarquias de classe
+
 class Pet:
     def __init__(self, name, age):
         self.name = name
