@@ -1,0 +1,7 @@
+1) O limite de bytes que podem ser enviados é 60KB.
+
+2) Uma das melhores formas de transmissão de arquivos grande é dividir o conteúdo da mensagem em diversos pacotes e enviá-los
+através de uma codificação padrão, a fim de otimizar o envio dos dados.
+
+3) O TCP é um protocolo orientado à conexão e fornece a comunicação confiável com vários recursos.
+Por outro lado, o UDP é um protocolo de transporte em tempo real sem conexão, que oferece um processo de comunicação mais rápido, mas com pouca confiabilidade.
