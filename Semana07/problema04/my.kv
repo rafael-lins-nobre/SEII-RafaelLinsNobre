@@ -1,0 +1,124 @@
+<MyRootWidget>:
+    BoxLayout:
+        canvas:
+            Color:
+                rgba:0.92,0.92,0.92,1
+            Rectangle:
+                size:self.size
+                pos:self.pos
+        orientation:'vertical'
+        AppBar:
+        Menu:
+        BoxLayout:
+            Chat:
+        Widget:
+
+<AppBar@BoxLayout>:
+    padding:'6dp'
+    canvas:
+        Color:
+            rgba:0,0.3,0.13,1
+        Rectangle:
+            size:self.size
+            pos:self.pos
+    size_hint_y:None
+    height:'45dp'
+    Label:
+        text:"ZapZap"
+        bold:True
+        font_size:'20dp'
+        halign:'left'
+        text_size:self.size
+        valign:'center'
+        padding_x:'10dp'
+    Icon:
+        active:True
+        background_normal:'magnifying-glass.png'
+    Icon:
+        active:True
+        background_normal:'dots-three-vertical.png'
+    
+
+<Menu@BoxLayout>:
+    canvas:
+        Color:
+            rgba:0,0.3,0.13,1
+        Rectangle:
+            size:self.size
+            pos:self.pos
+    padding:'5dp'
+    spacing:'10dp'
+    size_hint_y:None
+    height:'35dp'
+    Icon:
+        background_normal:'camera.png'
+    MenuButton:
+        text:'CHATS'
+        active:True
+    MenuButton:
+        text:'STATUS'
+    MenuButton:
+        text:'CALLS'
+
+<Foto@Widget>:
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Ellipse:
+            size:self.size
+            pos:self.pos
+            source: 'Perfil.jpeg'
+    size_hint_x:None
+    width: self.height
+
+
+<Chat@BoxLayout>:
+    size_hint_y:None
+    height:'80 dp'
+    padding:'10dp'
+    Foto:
+    BoxLayout:
+        orientation:'vertical'
+        padding:'10dp'
+        Label:
+            text:'Nome do Grupo ou Pessoa'
+            color: 0,0,0,1
+            text_size:self.size
+            halign:'left'
+            valign:'center'
+            bold:True
+        Label:
+            text: 'Ultima mensagem do chat'
+            color: 0,0,0,1
+            text_size:self.size
+            halign:'left'
+            valign:'center'
+    Label:
+        text:'21:01PM'
+        color:0,0,0,0.5
+        size_hint_x:None
+        width:'100dp'
+        text_size:self.size
+        valign:'top'
+        halign:'right'
+
+
+<MenuButton@Button>:
+    active:False
+    canvas:
+        Color:
+            rgba:1,1,1,1
+        Line:
+            width:2 if root.active else 0.1
+            points:self.x,self.y,self.x+self.width,self.y
+    
+    background_color: 0,0,0,0
+    bold:True
+    color: (1,1,1,1) if root.active else (1,1,1,0.5)
+
+<Icon@Button>:
+    active:False
+    size_hint_x:None
+    width:self.height
+    border:0,0,0,0
+    background_color: (1,1,1,1) if root.active else (1,1,1,0.5)
